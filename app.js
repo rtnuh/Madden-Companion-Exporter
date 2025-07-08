@@ -10,15 +10,15 @@ const app = express();
 // Enter the path to your service account json file below where it says "REPLACE_WITH_SERVICE_ACCOUNT"
 // If you need more help with this step go here: https://firebase.google.com/docs/admin/setup
 
-// const serviceAccount = require("./REPLACE_WITH_SERVICE_ACCOUNT.json");
+const serviceAccount = require("./firebase-adminsdk-q1g2l@cfm-connect-d4f00.iam.gserviceaccount.com.json");
 
 // TODO: Uncomment out line 17-21
 // Enter your database url from firebase where it says <DATABASE_NAME> below.
-// Refer to picture for reference. It's the 2nd property.
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount),
-//   databaseURL: "https://<DATABASE_NAME>.firebaseio.com/"
-// });
+Refer to picture for reference. It's the 2nd property.
+admin.initializeApp({
+credential: admin.credential.cert(serviceAccount),
+databaseURL: "https://cfm-connect-d4f00-default-rtdb.firebaseio.com/"
+});
 
 app.set('port', (process.env.PORT || 3001));
 
